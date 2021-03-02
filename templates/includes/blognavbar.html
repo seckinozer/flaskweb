@@ -1,0 +1,61 @@
+<style>
+  .nav-item::after{content:'';display:block;width:0px;height:2px;background:blue;transition: 0.7s;}
+  .nav-item:hover::after{width:100%;}
+  .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link, .navbar-nav .nav-link:focus, .nav-link .navbar-nav .nav-link:hover{color:blue;}
+  .nav-link{padding:15px 5px;transition:0.2s;}
+  .dropdown-item.active, .dropdown-item:active{color:blue;}
+  .dropdown-item:focus, .dropdown-item:hover{background:#fec400;}
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/eservice">REEZO|E-Hizmetler</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Ana Sayfa <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/articles">REEZO|Blog <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/archive">REEZO|E-Kütüphane</a>
+        </li>
+        
+        
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        {% if session["logged_in"] %}
+        <li class="nav-item active">
+          <a class="nav-link" href="/dashboard">kullanıcı Kontrol Paneli</a>
+        </li>  
+        <li class="nav-item active">
+          <a class="nav-link" href="/logout">Çıkış Yap</a>
+        </li>
+        {% elif session["admin_logged_in"] %}
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="/admindashboard">Admin Kontrol Paneli</a>
+          </li>  
+         <li class="nav-item active">
+            <a class="nav-link" href="/logout">Çıkış Yap</a>
+         </li>
+        
+
+        {% else %}
+            <li class="nav-item active">
+              <a class="nav-link" href="/login">Giriş Yap</a>
+            </li>
+             
+        {% endif %}
+        
+        
+        <li class="nav-item active">
+          <a class="nav-link" href="/register">Kaydol</a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>

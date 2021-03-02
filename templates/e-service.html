@@ -1,0 +1,140 @@
+{% extends "layout1.html" %}
+
+{% block body %}
+<style>
+    .container {
+        max-width: 960px;
+      }
+      
+      /*
+       * Custom translucent site header
+       */
+      
+      .site-header {
+        background-color: rgba(0, 0, 0, .85);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+      }
+      .site-header a {
+        color: #8e8e8e;
+        transition: color .15s ease-in-out;
+      }
+      .site-header a:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+      
+      /*
+       * Dummy devices (replace them with your own or something else entirely!)
+       */
+      
+      .product-device {
+        position: absolute;
+        right: 10%;
+        bottom: -30%;
+        width: 300px;
+        height: 540px;
+        background-color: #333;
+        border-radius: 21px;
+        transform: rotate(30deg);
+      }
+      
+      .product-device::before {
+        position: absolute;
+        top: 10%;
+        right: 10px;
+        bottom: 10%;
+        left: 10px;
+        content: "";
+        background-color: rgba(255, 255, 255, .1);
+        border-radius: 5px;
+      }
+      
+      .product-device-2 {
+        top: -25%;
+        right: auto;
+        bottom: 0;
+        left: 5%;
+        background-color: #e5e5e5;
+      }
+      
+      
+      /*
+       * Extra utilities
+       */
+      
+      .flex-equal > * {
+        flex: 1;
+      }
+      @media (min-width: 768px) {
+        .flex-md-equal > * {
+          flex: 1;
+        }
+      }
+      .lead{
+          color: grey;
+      }
+      .display-5{
+          color: rgb(28, 96, 160);
+      }
+      .icon{
+          color: blue;
+          
+      }
+      .shadow-background{
+          background-color:#a3a3a3;
+          width: 100%;
+          height: 200px;
+          border-radius: 42px 42px 42px 42px;
+          opacity: 90%;
+      }
+      .position-h3{
+          position: relative;
+          top: -30px;
+          right: auto;
+          left: auto;
+          bottom: auto;
+      }
+      .h6{
+          right: -30px;
+      }
+      
+</style>
+    <div class="shadow-background  ">
+        <br>
+        <h3 class="text-center" style="color: white;">REEZO|E-Servisler</h3>
+        <hr>
+        <h6 class=" text-center" style="font-size:20px;letter-spacing:1px;margin:0 0 20px;margin-left: 90px;margin-right:90px; color:black;">REEZO|Blog ile bilgilerini paylaşabilir, E-Kütüphane ile sınırsız kod örneklerine ücretsiz ulaşabilirsin.<a href="/privacy">REEZO|Blog ve REEZO|E-Kütüphane kurallarına</a> uyman gerektiğini sakın unutma. O zaman hadi başlayalım</h6>
+    </div>
+    <hr>
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5">REEZO|Blog</h2>
+        <hr style="color: rgb(158, 207, 191);">
+        <p class="lead">Teknolojiyi ve kendimizi tartışarak öğrenmek,üretmek,gelişmek ve geliştirmek istiyorsanız REEZO|Blog tam size göre.</p></div>
+      <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+          <br><br><br><br>
+        
+        <a href="/articles"><span class="icon fa fa-rocket " style="font-size: 50px;"></span><h3 class="text-dark"> Daha Fazlası İçin Tıklayınız </h3></a>
+      </div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5">REEZO|E-Arşiv</h2>
+        <hr>
+        <p class="lead">''Bilgi paylaştıkça çoğalır'' diyerek yola çıktığımız açık kaynak kod kütüphanesi ile yediden yetmişe herkese kapımız açık. </p>
+      </div>
+      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+          <br><br><br><br>
+        <a href="/archive"><span class="icon fa fa-globe " style="font-size: 50px;"></span><h3 class="text-white"> Daha Fazlası İçin Tıklayınız </h3></a>
+      </div>
+      
+    </div>
+  </div>
+
+  
+  
+
+  
+{% endblock %}

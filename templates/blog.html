@@ -1,0 +1,29 @@
+{% extends "layout1.html" %}
+
+{% block body %}
+<title>REEZO|Blog</title>
+<h3>REEZO|Blog'a Hoşgeldiniz</h3>
+<hr>
+<p class="text-dark">REEZO|Blog ile bilgilerimizi paylaşıyor bilmediklerimizi öğreniyoruz. Unutmayın ki REEZO|Blog bir tartışma ve paylaşma platformudur. <br> Yazılarınızda <a href="/privacy">Blog kurallarını</a> unutmayın.</p>
+<hr>
+
+{% if articles %}
+<form action="/search" method = "post">
+    <input type="text" name = "keyword" class="form-control form-control-lg form-control-borderless" maxlength="64" placeholder="Bir anahtar kelime veya makale adı aratın">
+<button type="submit" class="btn btn-lg btn-success">Ara</button>
+</form>
+<hr>
+
+<ul class="list-group">
+   {% for article in articles %}
+   <li class = "list-group-item"><a href="article/{{article.id}}"><h6 class="text-dark">{{article.author}} Yazdı :</h6> <hr>{{article.title}}</a></li>
+   {% endfor %}
+</ul>
+
+{% else %}
+
+<div class = "alert alert-danger">Bu blokta henüz makale bulunmuyor...</div>
+{% endif %}
+<hr>
+
+{% endblock body %}

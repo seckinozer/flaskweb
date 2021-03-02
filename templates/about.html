@@ -1,0 +1,225 @@
+{% extends "layout.html" %}
+{% block body %}
+<style>
+
+   
+h4{text-align:center;margin:30px 0;color:#444}
+
+
+/******************* Timeline mission/vission *****************/
+.main-timeline2{padding-top:50px;overflow:hidden;position:relative}
+.main-timeline2:before{content:"";width:7px;height:100%;background:#084772;margin:0 auto;position:absolute;top:80px;left:0;right:0}
+.main-timeline2 .timeline{width:50%;float:left;padding:20px 60px;border-top:7px solid #084772;border-right:7px solid #084772;border-radius:0 30px 0 0;position:relative;right:-3.5px}
+.main-timeline2 .icon{display:block;width:50px;height:50px;line-height:50px;border-radius:50%;background:#e84c47;border:1px solid #fff;text-align:center;font-size:25px;color:#fff;box-shadow:0 0 0 2px #e84c47;position:absolute;top:-30px;left:0}
+.main-timeline2 .timeline-content{display:block;padding:30px 10px 10px;border-radius:20px;background:#e84c47;color:#fff;position:relative}
+.main-timeline2 .timeline-content:hover{text-decoration:none;color:#fff}
+.main-timeline2 .timeline-content:after,.main-timeline2 .timeline-content:before{content:"";display:block;width:10px;height:50px;border-radius:10px;background:#e84c47;border:1px solid #fff;position:absolute;top:-35px;left:50px}
+.main-timeline2 .timeline-content:after{left:auto;right:50px}
+.main-timeline2 .title{font-size:24px;margin:0}
+.main-timeline2 .description{font-size:15px;letter-spacing:1px;margin:0 0 5px}
+.main-timeline2 .timeline:nth-child(2n){border-right:none;border-left:7px solid #084772;border-radius:30px 0 0;right:auto;left:-3.5px}
+.main-timeline2 .timeline:nth-child(2n) .icon{left:auto;right:0;box-shadow:0 0 0 2px #4bd9bf}
+.main-timeline2 .timeline:nth-child(2){margin-top:130px}
+.main-timeline2 .timeline:nth-child(odd){margin:-130px 0 30px}
+.main-timeline2 .timeline:nth-child(even){margin-bottom:80px}
+.main-timeline2 .timeline:first-child,.main-timeline2 .timeline:last-child:nth-child(even){margin:0 0 30px}
+.main-timeline2 .timeline:nth-child(2n) .icon,.main-timeline2 .timeline:nth-child(2n) .timeline-content,.main-timeline2 .timeline:nth-child(2n) .timeline-content:after,.main-timeline2 .timeline:nth-child(2n) .timeline-content:before{background:#4bd9bf}
+.main-timeline2 .timeline:nth-child(3n) .icon,.main-timeline2 .timeline:nth-child(3n) .timeline-content,.main-timeline2 .timeline:nth-child(3n) .timeline-content:after,.main-timeline2 .timeline:nth-child(3n) .timeline-content:before{background:#ff9e09}
+.main-timeline2 .timeline:nth-child(3n) .icon{box-shadow:0 0 0 2px #ff9e09}
+.main-timeline2 .timeline:nth-child(4n) .icon,.main-timeline2 .timeline:nth-child(4n) .timeline-content,.main-timeline2 .timeline:nth-child(4n) .timeline-content:after,.main-timeline2 .timeline:nth-child(4n) .timeline-content:before{background:#3ebae7}
+.main-timeline2 .timeline:nth-child(4n) .icon{box-shadow:0 0 0 2px #3ebae7}
+@media only screen and (max-width:767px){.main-timeline2:before{left:0;right:auto}
+.main-timeline2 .timeline,.main-timeline2 .timeline:nth-child(even),.main-timeline2 .timeline:nth-child(odd){width:100%;float:none;padding:20px 30px;margin:0 0 30px;border-right:none;border-left:7px solid #084772;border-radius:30px 0 0;right:auto;left:0}
+.main-timeline2 .icon{left:auto;right:0}
+}
+@media only screen and (max-width:480px){.main-timeline2 .title{font-size:18px}
+}
+
+
+
+
+/******************* Timeline  *****************/
+.main-timeline5{overflow:hidden;position:relative}
+.main-timeline5 .timeline{position:relative;margin-top:-79px}
+.main-timeline5 .timeline:first-child{margin-top:0}
+.main-timeline5 .timeline-icon,.main-timeline5 .year{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}
+.main-timeline5 .timeline:after,.main-timeline5 .timeline:before{content:"";display:block;width:100%;clear:both}
+.main-timeline5 .timeline:before{content:"";width:100%;height:100%;box-shadow:-8px 0 5px -5px rgba(0,0,0,.5) inset;position:absolute;top:0;right:0;z-index:2}
+.main-timeline5 .timeline-icon{width:210px;height:210px;border-radius:50%;border:25px solid transparent;border-top-color:#f44556;border-right-color:#f44556;z-index:1;transform:rotate(45deg)}
+.main-timeline5 .year{display:block;width:110px;height:110px;line-height:110px;border-radius:50%;background:#fff;box-shadow:0 0 20px rgba(0,0,0,.4);font-size:30px;font-weight:700;color:#f44556;text-align:center;transform:rotate(-45deg)}
+.main-timeline5 .timeline-content{width:35%;float:right;background:#f44556;padding:30px 20px;margin:50px 0;z-index:1;position:relative}
+.main-timeline5 .timeline-content:before{content:"";width:20%;height:15px;background:#f44556;position:absolute;top:50%;left:-20%;z-index:-1;transform:translateY(-50%)}
+.main-timeline5 .title{font-size:20px;font-weight:700;color:#fff;margin:0 0 10px}
+.main-timeline5 .description{font-size:16px;color:#fff;line-height:24px;margin:0}
+.main-timeline5 .timeline:nth-child(2n):before{box-shadow:8px 0 5px -5px rgba(0,0,0,.5) inset}
+.main-timeline5 .timeline:nth-child(2n) .timeline-icon{transform:rotate(-135deg);border-top-color:#e97e2e;border-right-color:#e97e2e}
+.main-timeline5 .timeline:nth-child(2n) .year{transform:rotate(135deg);color:#e97e2e}
+.main-timeline5 .timeline:nth-child(2n) .timeline-content{float:left}
+.main-timeline5 .timeline:nth-child(2n) .timeline-content:before{left:auto;right:-20%}
+.main-timeline5 .timeline:nth-child(2n) .timeline-content,.main-timeline5 .timeline:nth-child(2n) .timeline-content:before{background:#e97e2e}
+.main-timeline5 .timeline:nth-child(3n) .timeline-icon{border-top-color:#13afae;border-right-color:#13afae}
+.main-timeline5 .timeline:nth-child(3n) .year{color:#13afae}
+.main-timeline5 .timeline:nth-child(3n) .timeline-content,.main-timeline5 .timeline:nth-child(3n) .timeline-content:before{background:#13afae}
+.main-timeline5 .timeline:nth-child(4n) .timeline-icon{border-top-color:#105572;border-right-color:#105572}
+.main-timeline5 .timeline:nth-child(4n) .year{color:#105572}
+.main-timeline5 .timeline:nth-child(4n) .timeline-content,.main-timeline5 .timeline:nth-child(4n) .timeline-content:before{background:#105572}
+@media only screen and (max-width:1199px){.main-timeline5 .timeline{margin-top:-103px}
+.main-timeline5 .timeline-content:before{left:-18%}
+.main-timeline5 .timeline:nth-child(2n) .timeline-content:before{right:-18%}
+}
+@media only screen and (max-width:990px){.main-timeline5 .timeline{margin-top:-127px}
+.main-timeline5 .timeline-content:before{left:-2%}
+.main-timeline5 .timeline:nth-child(2n) .timeline-content:before{right:-2%}
+}
+@media only screen and (max-width:767px){.main-timeline5 .timeline{margin-top:0;overflow:hidden}
+.main-timeline5 .timeline:before,.main-timeline5 .timeline:nth-child(2n):before{box-shadow:none}
+.main-timeline5 .timeline-icon,.main-timeline5 .timeline:nth-child(2n) .timeline-icon{margin-top:-30px;margin-bottom:20px;position:relative;transform:rotate(135deg)}
+.main-timeline5 .timeline:nth-child(2n) .year,.main-timeline5 .year{transform:rotate(-135deg)}
+.main-timeline5 .timeline-content,.main-timeline5 .timeline:nth-child(2n) .timeline-content{width:100%;float:none;border-radius:0 0 20px 20px;text-align:center;padding:25px 20px;margin:0 auto}
+.main-timeline5 .timeline-content:before,.main-timeline5 .timeline:nth-child(2n) .timeline-content:before{width:15px;height:25px;position:absolute;top:-22px;left:50%;z-index:-1;transform:translate(-50%,0)}
+}
+
+
+
+
+
+</style>
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+    <title>Hakkımızda</title>
+<div class="container">
+    <hr>
+    <h4><img src="https://i.ibb.co/8x9FT0s/REEZO-1.png" alt=""></h4>
+    <hr>
+    
+        <h4>REEZO Start-Up ekibi donanım , tasarım ve yazılım bilgilerini etkin kullanmak isteyen bir grup Mühendislik öğrencisi ile Türkiye'nin Yerli Ve Milli Teknoloji Hamlesinde etkin rol almak ve mesleki yetkinliklerini kullanarak üretirken öğrenmek öğrenirken de üretmek amacı ile kurulmuştur.Şimdiye kadar REEZO Ailesi bir çok alanda bir çok başarıya imza atmış ve atmaya devam etmektedir. Yerli Ve Milli Teknoloji Hamlesinde REEZO Ailesinin yanında olan tüm destekçilerimize teşekkür ederiz.</h4>
+        <hr>
+        
+            <div class="container">
+            
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-timeline2">
+                        <div class="timeline">
+                            <span class="icon fa fa-globe"></span>
+                            <a href="#" class="timeline-content">
+                                
+                                <h3 class="title">Vizyonumuz</h3>
+                                <hr>
+                                <p class="description Tex">
+                                    Bilgi ,tecrübe ve yetenek üçlüsü ile Dünya teknolojilerinin öncüsü olmayı ve genç nesillerimizin aynı çaba içerisinde olması için çaba gösteriyoruz.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="timeline">
+                            <span class="icon fa fa-rocket"></span>
+                            <a href="#" class="timeline-content">
+                                <h3 class="title">Misyonumuz</h3>
+                                <hr>
+                                <p class="description">
+                                    Güvenilir ve kullanışlı yüksek teknolojilerimizi; müşterilerimiz ile üretmek ,kullanmak ve geliştirmek; tüm bunları yaparken daima geleceği düşünürek küçüklerimize miras olan Dünyamızı daha iyi bir hale getirmek.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="timeline">
+                            <span class="icon fa fa-briefcase"></span>
+                            <a href="#" class="timeline-content">
+                                <h3 class="title">Değerlerimiz</h3>
+                                <hr>
+                                <p class="description">
+                                    Küresel teknoloji pazarında sadece ekonomik kaygılar gütmüyor, genç mühendis ve mühendis adaylarımızın,Dijital Dünya'ya meraklı küçüklerimizin ve REEZO Çalışanlarının kariyer gelişimlerinde yardımcı ve rehber oluyoruz.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="timeline">
+                            <span class="icon fa fa-mobile"></span>
+                            <a href="#" class="timeline-content">
+                                <h3 class="title">Yöntemimiz</h3>
+                                <hr>
+                                <p class="description">
+                                    Ailemizin 'Teknoloji üretirken ki prensibimiz' dediği ve Müşterilerimizin hayatını kolaylaştırmalı, kullanımı çabuk öğrenilebilmeli , sürekli eğitim gerektirmemeli kurallarını referans alarak daima çözüm odaklı çalışmalar gerçekleştiriyoruz.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        
+       
+        
+        <h3 class="text-center">Biz Kimiz</h3>
+        <hr>
+        <h4>Biz kimine göre çiftçi , kimine göre şoför , kimine göre de işçiyiz. Aslında biz sizlerin hayatını daha da kolaylaştırmak isteyen ve bunun için gece gündüz özveri ile çalışan bir grup mühendisiz. </h4>
+        <hr>
+        
+        <div class="container">
+            <h3 class="text-center">Tarihçe</h3>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-timeline5">
+                        <div class="timeline">
+                            <div class="timeline-icon"><span class="year">2019</span></div>
+                            <div class="timeline-content">
+                                <h3 class="title">Bugünlerin Temeli</h3>
+                                <hr>
+                                <p class="description">
+                                    Üç genç bir araya gelerek 'REEZO' adını verdikleri girişimi kurdu ve aynı zamanda 'Eski Köye Yeni Adet:Tarımda Yerli Ve Milli Teknoloji' sloganıyla TARA Asistan projesi için çalışmalar başlatıldı .
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-icon"><span class="year">2020/1</span></div>
+                            <div class="timeline-content">
+                                <h3 class="title">Gelişiyor Ve Geliştiriyoruz</h3>
+                                <hr>
+                                <p class="description">
+                                    Ekipçe yetkinliklerimizi ve fikirlerimiz ile beraber günden güne geliştiriyor ve gelişiyoruz.  
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-icon"><span class="year">2020/2</span></div>
+                            <div class="timeline-content">
+                                <h3 class="title">Her Konuda TEKNOLOJİ</h3>
+                                <hr>
+                                <p class="description">
+                                    Sadece tarım teknolojileri değil akıllı şehir teknolojileri, enerji sistemleri , insansız araçlar üzerine de çalışıyoruz.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-icon"><span class="year">2021/1</span></div>
+                            <div class="timeline-content">
+                                <h3 class="title">Aklımız Bir Karış Toprakta, Gözümüz Bin Metre Havada!</h3>
+                                <hr>
+                                <p class="description">
+                                    TARA Asistan Projemizin hayati gereksinimlerini geliştiriyor,Yerli Ve Milli Teknoloji Hamlesine katkıda bulunuyoruz.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+</div>
+</body>
+</html>
+{% endblock %}
